@@ -1,6 +1,13 @@
 name: Generate SBOM Report with Syft
 
 on:
+  workflow_dispatch:
+    inputs:
+      go:
+        description: "Go parameter for triggering"
+        required: true
+        default: "run"
+        type: string    
   push:
     branches:
       - master
